@@ -1,0 +1,8 @@
+//Teste de requisições - Posição
+
+@baseURL = http://localhost:4000
+
+###
+//GET - Lista as Posições
+GET {{baseURL}}/posicoes
+Content-Type: application/json
