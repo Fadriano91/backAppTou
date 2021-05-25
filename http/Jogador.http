@@ -1,0 +1,54 @@
+//Teste de requisições - Jogador
+
+@baseURL = http://localhost:4000
+@id = 60a9ee4ca22e18529aa000d4
+@idPosicao = 60a9ee4ca22e18529aa000d4
+
+###
+//GET - Lista os Jogadores
+GET {{baseURL}}/jogadores
+Content-Type: application/json
+
+###
+//GET - Lista o Jogador pelo ID
+GET {{baseURL}}/jogadores/{{id}}
+Content-Type: application/json
+
+###
+//GET - Lista o Jogador pelo ID da Posição
+GET {{baseURL}}/jogadores/posicao/{{idPosicao}}
+Content-Type: application/json
+
+###
+// POST - Inclui um novo Jogador
+POST {{baseURL}}/jogadores
+Content-Type: application/json
+
+{"nome": "Marcos", 
+ "status": "ativo",
+ "posicao": "60a9ee4ca22e18529aa000d4",
+ "habilidade": "Pegar Penalti",
+ "peBom": "direito",
+ "estrela": 4,
+ "copa": "1"
+}
+
+###
+// DELETE - Apaga um Jogador pelo ID
+DELETE {{baseURL}}/jogadores/{{id}}
+Content-Type: application/json
+
+###
+// PUT - Altera o jogador
+PUT {{baseURL}}/jogadores
+Content-Type: application/json
+
+{
+"_id" : "",
+"nome" : "",
+"status" : "ativo",
+"posicao" : "",
+"peBom" : "",
+"estrela" : "",
+"copa" : "",
+}
