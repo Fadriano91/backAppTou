@@ -72,7 +72,8 @@ const validaJogador = [
     check("estrela", "Informe as estrelas do Jogador em número.").
           isNumeric().isFloat({min:0, max:5}).
           withMessage('A estrela deve ser de 0 a 5'),
-    check("copa", "Informe quantas Copas o Jogador participou em número.").isNumeric(),
+    check("copa", "Informe quantas Copas o Jogador participou em número.").
+          isNumeric().isFloat({min:0, max:5}),
 
 ]
 
