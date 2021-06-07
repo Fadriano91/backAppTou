@@ -66,8 +66,7 @@ const validaJogador = [
     check("nome", "Nome do Jogador é obrigatório.").not().isEmpty(),
     check("status", "Informe um status válido para o Jogador.").
           isIn(['ativo','inativo']),
-    check("posicao", "Informe uma Posição válida para o Jogador.").
-          isMongoId().trim(),
+    check("posicao", "Informe uma Posição válida para o Jogador.").not().isEmpty(),
     check("habilidade", "Informe as habilidades do Jogador.").not().isEmpty(),
     check("peBom", "Informe o pé bom do Jogador.").isIn(['direito','esquerdo']),
     check("estrela", "Informe as estrelas do Jogador em número.").

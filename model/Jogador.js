@@ -11,10 +11,12 @@ const JogadorSchema = mongoose.Schema({
         size: {type: Number},
         mimetype: {type: String}
     },
-    posicao: {type:Schema.Types.ObjectId, ref: 'posicao'},
+    posicao: {type:String},
     habilidade: {type: String},
     peBom: {type: String, enum: ['direito', 'esquerdo'], default: 'direito'},
     estrela: {type: Number},
     copa: {type: Number}
 },{timestamps:true})
 module.exports = mongoose.model('jogador', JogadorSchema)
+
+//posicao: {type:Schema.Types.ObjectId, ref: 'posicao'},
