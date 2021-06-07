@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 require('dotenv').config() //Carrega as 'variáveis de ambiente'
 const InicializaMongoServer = require('./config/Db')
 //Definindo as rotas da aplicação
@@ -18,16 +19,7 @@ app.disable('x-powered-by')
 const PORT = process.env.PORT || 4000
 
 //Middleware do Express
-app.use(function( req, res, next){
-    //Em produção, remova o * e atualize o dominio/ip do seu app
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    //Cabeçalhos que serão permitidos
-    res.setHeader('Access-Control-Allow-Header', '*')
-    //EX: res.setHeader('Access-Control-Allow-Header', 'Content-Type, Accept, access-token')
-    //Métodos que serão permitidos
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS, PATCH')
-    next()
-})
+app.use(cors())
 
 
 
