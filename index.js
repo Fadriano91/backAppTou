@@ -37,7 +37,7 @@ app.use('/jogadores', rotasJogador)
 /* Rotas do conteúdo público */
 app.use('/public', express.static('public'))
 /*Rota do upload*/
-app.use('/upload', rotaUpload)
+//app.use('/upload', rotaUpload)
 
 /*Rota para trata exceções - 404 (Deve ser a última rota SEMPRE) */
 app.use(function(req, res) {

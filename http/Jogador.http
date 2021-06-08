@@ -24,13 +24,13 @@ Content-Type: application/json
 POST {{baseURL}}/jogadores
 Content-Type: application/json
 
-{"nome": "Marcos2", 
+{"nome": "Marcos1", 
  "status": "ativo",
  "posicao": "60bd73daa483a00004a31525",
  "habilidade": "Pegar Penalti",
  "peBom": "direito",
- "estrela": 4,
- "copa": "1"
+ "estrela": "2",
+ "copa": "2"
 }
 
 ###

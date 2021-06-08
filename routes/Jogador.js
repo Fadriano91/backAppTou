@@ -17,6 +17,7 @@ router.get('/', async(req,res)=> {
                               .populate("posicao", "nome")
       res.json(jogadores)
     }catch (err){
+        console.log(err.message)
         res.status(500).send({
             errors: [{message: 'Não foi possível obter os jogadores!'}]
         })
